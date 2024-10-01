@@ -68,9 +68,7 @@
     "side-channel": "^1.0.6",
     "statuses": "^2.0.1",
     "toidentifier": "^1.0.1",
-    "ts-node": "^10.9.2",
     "type-is": "^1.6.18",
-    "typescript": "^5.6.2",
     "undici-types": "^6.19.8",
     "unpipe": "^1.0.0",
     "utils-merge": "^1.0.1",
@@ -78,7 +76,11 @@
     "vary": "^1.1.2",
     "yn": "^3.1.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
