@@ -1,7 +1,7 @@
 {
   "name": "nodejs24_hw_mykyta_l",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
   "dependencies": {
     "accepts": "^1.3.8",
     "acorn": "^8.12.1",
