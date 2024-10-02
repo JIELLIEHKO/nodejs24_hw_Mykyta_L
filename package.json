@@ -1,4 +1,7 @@
 {
+  "dependencies": {
+    "@nestjs/mapped-types": "*"
+  },
   "name": "node_hw",
   "version": "1.0.0",
   "main": "index.js",
