@@ -1,5 +1,5 @@
 import { Module, MiddlewareConsumer, RequestMethod } from '@nestjs/common';
-import { LoggerMiddleware } from '../logger.middleware';
+import { LogIpMiddleware } from '../middlewares/LogIpMiddleware';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
@@ -11,7 +11,7 @@ import { AppService } from './app.service';
 export class AppModule {
   configure(consumer: MiddlewareConsumer) {
     consumer
-        .apply(LoggerMiddleware)
+        .apply(LogIpMiddleware)
         .forRoutes({ path: '*', method: RequestMethod.ALL });
   }
 }
