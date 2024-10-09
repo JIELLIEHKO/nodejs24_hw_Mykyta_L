@@ -1,14 +1,14 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { CreateUserDto } from './dto/create-user.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
 import { IUser } from './interfaces/user.interface';
+import { ICreateUser } from './interfaces/create-user.interface';
+import { IUpdateUser } from './interfaces/update-user.interface';
 
 @Injectable()
 export class UsersService {
   private users: IUser[] = [];
 
-  create(createUserDto: CreateUserDto): IUser {
-    const newUser: IUser = { ...createUserDto };
+  create(user: ICreateUser): IUser {
+    const newUser: IUser = { ...user };
     this.users.push(newUser);
     return newUser;
   }
@@ -25,15 +25,15 @@ export class UsersService {
     return user;
   }
 
-  update(id: number, updateUserDto: UpdateUserDto): IUser {
+  update(id: number, updateUser: IUpdateUser): IUser {
     const user = this.findOne(id);
-    Object.assign(user, updateUserDto);
+    Object.assign(user, updateUser);
     return user;
   }
 
-  partialUpdate(id: number, updateUserDto: UpdateUserDto): IUser {
+  partialUpdate(id: number, updateUser: IUpdateUser): IUser {
     const user = this.findOne(id);
-    Object.assign(user, updateUserDto);
+    Object.assign(user, updateUser);
     return user;
   }
 
